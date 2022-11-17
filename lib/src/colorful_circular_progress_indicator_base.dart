@@ -3,9 +3,16 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class ColorfulCircularProgressIndicator extends StatefulWidget {
+  /// The width of the line used to draw the circle.
   final double strokeWidth;
+
+  /// List of colors for circular progress indicator.
   final List<Color> colors;
+
+  /// Setting the width of circular progress indicator.
   final double indicatorWidth;
+
+  /// Setting the height of circular progress indicator.
   final double indicatorHeight;
   const ColorfulCircularProgressIndicator(
       {Key? key,
@@ -23,9 +30,16 @@ class ColorfulCircularProgressIndicator extends StatefulWidget {
 class ColorfulCircularProgressIndicatorState
     extends State<ColorfulCircularProgressIndicator>
     with TickerProviderStateMixin {
+  /// animation controller for first animation.
   late AnimationController firstAnimationController;
+
+  /// defines start angle in draw arc.
   late Animation<double> firstAnimation;
+
+  /// animation controller for second animation.
   late AnimationController secondAnimationController;
+
+  /// defines sweep angle in draw arc.
   late Animation<double> secondAnimation;
   Random rd = Random();
   int randomColorId = 0;
